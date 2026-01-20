@@ -24,8 +24,8 @@ A secure Visitor Management System built with QR authentication, role-based acce
   - Visitors Today
   - Active Visitors
   - Exited Visitors
-  - **Hourly Visitors Bar Chart**
-- Peak hour detection
+  - Hourly Visitors Bar Chart
+  - Peak hour detection
 
 
  🔎 Search & Filters
@@ -77,7 +77,7 @@ Backend (Spring Boot)
 Database (MySQL)
 
 
-🔄 Application Workflow
+🔄 **Application Workflow**
 
 1. Visitor is registered by Security
 2. QR code is generated and emailed to visitor
