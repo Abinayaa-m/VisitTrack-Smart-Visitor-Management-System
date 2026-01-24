@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------------------
+   FROSTED GLASSMORPHISM CARD
+----------------------------------------------------------- */
+.glass-card {
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(255, 255, 255, 0.3) inset;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(255, 255, 255, 0.4) inset;
+}
+
+/* ----------------------------------------------------------
+   UNIVERSAL INPUT FIELD STYLE WITH LIGHT + DARK THEME SUPPORT
+----------------------------------------------------------- */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: white;
+  color: black;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Light theme hover */
+.input-field:hover {
+  background: #f3f4f6; /* light gray */
+  border-color: #9ca3af;
+}
+
+/* DARK THEME SUPPORT (applies when parent has class = dark) */
+.dark .input-field {
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Dark theme hover */
+.dark .input-field:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* ----------------------------------------------------------
+   PAGE FADE ANIMATION
+----------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
